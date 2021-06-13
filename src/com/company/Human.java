@@ -40,19 +40,19 @@ public class Human
             System.out.println("Wypłata nie może być ujemna!");
     }
 
-    private String samochod;
+    private Car samochod;;
     void Get_Samochod()
     {
-        System.out.println(imie + " " + nazwisko + " posiada samochód o rejestracji: " + samochod);
+        System.out.println(imie + " " + nazwisko + " posiada samochód: " + samochod.model);
     }
-    void Set_Samochod(String samochod, double wartosc)
+    void Set_Samochod(Car samochod)
     {
-        if(salary>wartosc)
+        if(salary>samochod.wartosc)
         {
             System.out.println("Udało się kupić samochód za gotówkę");
             this.samochod = samochod;
         }
-        else if (salary>(wartosc/12))
+        else if (salary>(samochod.wartosc/12))
         {
             System.out.println("Udało się kupić samochód na kredyt");
             this.samochod = samochod;
